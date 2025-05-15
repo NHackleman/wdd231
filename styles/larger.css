@@ -1,0 +1,45 @@
+@media (min-width: 700px) {
+    main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+
+    #courses {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .course-card {
+        width: calc(33% - 1rem);
+        min-width: 220px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #nav-list {
+        display: flex !important;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        background: none;
+    }
+
+    #nav-list li {
+        border: none;
+    }
+
+    #nav-list a {
+        padding: 1rem 2rem;
+        border-radius: 0;
+    }
+}

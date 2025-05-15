@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHackleman | WDD 231 Home</title>
+    <meta name="description" content="Home page for NHackleman's WDD 231 course work.">
+    <meta name="author" content="NHackleman">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:400,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/your-photo.jpg" alt="NHackleman's photo" width="72" height="72">
+        <span>NHackleman</span>
+    </header>
+    <nav>
+        <button id="menu" aria-label="Open navigation menu">&#9776;</button>
+        <ul id="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+            <li><a href="https://github.com/nhackleman" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+            <p>Welcome to my WDD 231 course homepage! Here you'll find my coursework, projects, and resources for the
+                semester.</p>
+        </section>
+        <section>
+            <h2>Certificate Courses</h2>
+            <div id="course-controls">
+                <button id="all-courses-btn">All Courses</button>
+                <button id="wdd-courses-btn">WDD Courses</button>
+                <button id="cse-courses-btn">CSE Courses</button>
+            </div>
+            <div id="courses"></div>
+            <div id="credits"></div>
+        </section>
+        <section>
+            <h2>Contact & Resources</h2>
+            <p>Check out my <a href="https://github.com/nhackleman" target="_blank">GitHub</a> and <a
+                    href="https://www.linkedin.com/" target="_blank">LinkedIn</a> for more!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> NHackleman | Texas, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
