@@ -40,4 +40,7 @@ listBtn.addEventListener('click', () => {
 });
 
 // Load members on page load
-window.addEventListener('DOMContentLoaded', () => fetchMembers('grid'));
+window.addEventListener('DOMContentLoaded', () => {
+    fetchMembers('grid');
+    document.getElementById('last-modified').textContent = document.lastModified;
+});
