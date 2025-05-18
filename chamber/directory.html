@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory</title>
+    <meta name="description" content="Directory of businesses and organizations.">
+    <meta name="author" content="Nathan Hackleman">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Chamber Directory">
+    <meta property="og:description" content="Discover local businesses in Chamber of Commerce.">
+    <meta property="og:image" content="https://yourdomain.com/images/social-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+</head>
+
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="images/logo.png" alt="Logo">
+            <h1>Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <ul id="main-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="directory-controls">
+            <button id="grid-view" aria-label="Grid View" class="active">Grid</button>
+            <button id="list-view" aria-label="List View">List</button>
+        </section>
+        <section id="members-container" class="grid-view">
+            <!-- Member cards will be injected here -->
+        </section>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>Contact: info@yourchamber.com | (555) 123-4567 | 123 Main St, Your City</p>
+        </div>
+        <div class="dev-info">
+            <p>&copy; 2025 <span id="your-name">Your Full Name</span> | WDD 231 | Last Modified: <span
+                    id="last-modified"></span></p>
+        </div>
+    </footer>
+    <script src="./scripts/directory.js" defer></script>
+    <script src="./scripts/lastmodified.js" defer></script>
+</body>
+
+</html>
