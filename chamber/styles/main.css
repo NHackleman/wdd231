@@ -56,3 +56,282 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+/* === Home Page Specific Styles === */
+
+/* --- General Section Styling --- */
+main section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    /* Default background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #333;
+    /* Darker heading color */
+    border-bottom: 2px solid #005A9C;
+    /* Accent color from a typical chamber palette */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- Hero Section --- */
+#hero {
+    position: relative;
+    padding: 0;
+    /* Remove padding if image is full width */
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    /* Ensure no overflow from image */
+}
+
+#hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 250px;
+    /* Minimum height for hero */
+    object-fit: cover;
+    /* Cover the area, might crop */
+}
+
+.hero-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-cta h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2em;
+    border-bottom: none;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FFA500;
+    /* Bright call to action color */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #cc8400;
+    /* Darker shade on hover */
+}
+
+/* --- Events Section --- */
+#events .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.event-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.event-item h3 {
+    margin-top: 0;
+    color: #005A9C;
+}
+
+.event-item a {
+    color: #FFA500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.event-item a:hover {
+    text-decoration: underline;
+}
+
+/* --- Weather Section --- */
+#weather .weather-card {
+    background-color: #eef7ff;
+    /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#weather .weather-card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #005A9C;
+}
+
+#weather-icon {
+    width: 75px;
+    height: 75px;
+    margin: 10px auto;
+    display: block;
+    /* Will be unhidden by JS */
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.forecast-day {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    min-width: 100px;
+    /* Minimum width for forecast items */
+    text-align: center;
+}
+
+.forecast-day p {
+    margin: 5px 0;
+}
+
+/* --- Spotlights Section --- */
+#spotlights .spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Re-use or adapt .member-card styles from directory for spotlights */
+/* If .member-card is suitable, no new styles needed for the card itself, just the container */
+/* Ensure .level-2 (Silver) and .level-3 (Gold) styles are applied correctly by JS */
+/* Example: .member-card in spotlights might need slight tweaks if different from directory */
+.spotlight-container .member-card {
+    /* Inherits from global .member-card */
+    /* Add any specific overrides for spotlights if needed */
+    border-left: 5px solid #FFA500;
+    /* Example: Accent for spotlight cards */
+}
+
+.spotlight-container .member-card.gold-member {
+    border-left-color: #d4af37;
+    /* Gold */
+}
+
+.spotlight-container .member-card.silver-member {
+    border-left-color: #c0c0c0;
+    /* Silver */
+}
+
+
+/* --- Responsive Adjustments for Home Page Sections --- */
+@media (max-width: 768px) {
+    .hero-cta h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    #events .event-list,
+    #spotlights .spotlight-container {
+        grid-template-columns: 1fr;
+        /* Stack on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-cta {
+        padding: 15px;
+        width: 80%;
+        /* Adjust width for very small screens */
+    }
+
+    .hero-cta h2 {
+        font-size: 1.2em;
+    }
+
+    #forecast-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast-day {
+        width: 80%;
+        /* Make forecast days take more width when stacked */
+    }
+}
+
+/* === End of Home Page Specific Styles === */
+
+/* Basic Nav Toggle Styles (add to main.css if not present) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    /* Hidden by default on mobile */
+}
+
+nav ul.active {
+    display: block;
+    /* Shown when active */
+}
+
+#menu-toggle {
+    display: none;
+    /* Hidden on larger screens, shown via media query */
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust breakpoint as needed */
+    #menu-toggle {
+        display: block;
+        /* Show hamburger */
+        /* Add styling for the button itself */
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    nav ul {
+        /* Style for mobile menu - e.g., full width, column layout */
+        position: absolute;
+        top: 60px;
+        /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        /* Example background */
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        /* Example link color */
+    }
+}
