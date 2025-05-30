@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '50c063781d991fc741c7bfdb5498f727'; // Your OpenWeatherMap API Key
-    const weatherLocation = 'New York,US'; // City and country code
+    const apiKey = '50c063781d991fc741c7bfdb5498f727';
+    const weatherLocation = 'New York,US';
 
     // DOM Elements for Weather
     const currentTempEl = document.getElementById('current-temp');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayCurrentWeather(data) {
         if (!currentTempEl || !weatherDescEl || !weatherIconEl || !weatherLocationEl) return;
 
-        weatherLocationEl.textContent = data.name; // Display city name from API
+        weatherLocationEl.textContent = data.name;
         currentTempEl.textContent = Math.round(data.main.temp);
         const description = data.weather[0].description;
         weatherDescEl.textContent = description.charAt(0).toUpperCase() + description.slice(1);
@@ -51,25 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayForecast(data) {
         if (!forecastContainerEl) return;
-        forecastContainerEl.innerHTML = ''; // Clear previous forecast
+        forecastContainerEl.innerHTML = '';
 
-        // Get daily forecast (typically OpenWeatherMap gives 3-hour intervals, so we pick one per day)
+        // Get daily forecast
         const dailyForecasts = {};
         data.list.forEach(item => {
             const date = new Date(item.dt * 1000);
             const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
 
-            // Store the first forecast entry for each day (usually around noon or a consistent time)
-            if (!dailyForecasts[dayName] && date.getHours() >= 12) { // Prioritize noonish forecasts
+            if (!dailyForecasts[dayName] && date.getHours() >= 12) {
                 dailyForecasts[dayName] = item;
-            } else if (!dailyForecasts[dayName]) { // Fallback if no noon forecast found for a day yet
+            } else if (!dailyForecasts[dayName]) {
                 dailyForecasts[dayName] = item;
             }
         });
 
         let daysDisplayed = 0;
         for (const dayName in dailyForecasts) {
-            if (daysDisplayed >= 3) break; // Limit to 3 days
+            if (daysDisplayed >= 3) break;
 
             const item = dailyForecasts[dayName];
             const dayDiv = document.createElement('div');
@@ -98,10 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error(`Members data fetch failed: ${response.status}`);
             const members = await response.json();
 
-            // Filter for Gold (level 3) and Silver (level 2) members
             const qualifiedMembers = members.filter(member => member.level === 2 || member.level === 3);
 
-            // Shuffle and select 2 or 3 members
             const shuffledMembers = qualifiedMembers.sort(() => 0.5 - Math.random());
             const selectedCount = Math.random() < 0.5 ? 2 : 3; // Randomly choose 2 or 3
             const spotlightMembers = shuffledMembers.slice(0, Math.min(selectedCount, shuffledMembers.length));
@@ -115,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displaySpotlights(members) {
-        spotlightContainerEl.innerHTML = ''; // Clear previous spotlights
+        spotlightContainerEl.innerHTML = '';
 
         if (members.length === 0) {
             spotlightContainerEl.innerHTML = '<p>No spotlights to display at this time.</p>';
@@ -124,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         members.forEach(member => {
             const card = document.createElement('div');
-            card.className = 'member-card'; // Use existing .member-card style
+            card.className = 'member-card';
             if (member.level === 3) {
-                card.classList.add('gold-member'); // For specific gold styling
+                card.classList.add('gold-member');
             } else if (member.level === 2) {
-                card.classList.add('silver-member'); // For specific silver styling
+                card.classList.add('silver-member');
             }
 
             card.innerHTML = `
@@ -139,8 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
                 <p class="level level-${member.level}">${member.level === 3 ? 'Gold Member' : 'Silver Member'}</p>
             `;
-            // Note: The description field from members.json is not included here as per typical spotlight brevity.
-            // Add it if needed: <p>${member.description}</p>
             spotlightContainerEl.appendChild(card);
         });
     }

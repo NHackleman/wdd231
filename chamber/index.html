@@ -7,32 +7,28 @@
     <title>Chamber of Commerce - Home</title>
     <meta name="description" content="Welcome to the official website of our Chamber of Commerce.">
     <meta name="author" content="Nathan Hackleman">
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="styles/normalize.css"> <!-- Assuming normalize.css is in styles -->
-    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Facebook Open Graph -->
     <meta property="og:title" content="Chamber of Commerce - Home">
     <meta property="og:description" content="Join us in fostering a vibrant business community.">
-    <meta property="og:image" content="images/social-preview-home.jpg"> <!-- Placeholder image -->
-    <meta property="og:url" content="https://yourdomain.com/chamber/index.html"> <!-- Update with actual URL -->
+    <meta property="og:image" content="images/social-preview-home.jpg">
+    <meta property="og:url" content="https://nhackleman.github.io/wdd231/chamber/index.html">
 </head>
 
 <body>
     <header>
         <div class="logo-title">
-            <img src="images/logo.png" alt="Chamber Logo"> <!-- Ensure logo.png exists in images -->
-            <h1>Chamber of Commerce</h1> <!-- Update with actual Chamber Name -->
+            <img src="images/logo.png" alt="Chamber Logo">
+            <h1>Chamber of Commerce</h1>
         </div>
         <nav>
             <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
             <ul id="main-nav">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li> <!-- Call to action target -->
-                <li><a href="discover.html">Discover</a></li> <!-- Example, adjust as needed -->
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -54,7 +50,6 @@
         <section id="events">
             <h2>Current Events</h2>
             <div class="event-list">
-                <!-- Event items will be added here, perhaps dynamically or static -->
                 <article class="event-item">
                     <h3>Annual Business Expo</h3>
                     <p>Date: October 15, 2025</p>
@@ -76,10 +71,9 @@
                 <p>Location: <span id="weather-location">New York, USA</span></p>
                 <p>Current Temperature: <span id="current-temp">--</span>&deg;F</p>
                 <p>Description: <span id="weather-desc">--</span></p>
-                <img id="weather-icon" src="#" alt="Weather icon" style="display:none;">
+                <img id="weather-icon" src="#" alt="Weather icon">
                 <h3>3-Day Forecast</h3>
                 <div id="forecast-container">
-                    <!-- Forecast will be injected here by JS -->
                 </div>
             </div>
         </section>
@@ -87,7 +81,6 @@
         <section id="spotlights">
             <h2>Member Spotlights</h2>
             <div class="spotlight-container">
-                <!-- Spotlight cards will be injected here by JS -->
             </div>
         </section>
     </main>
@@ -95,7 +88,6 @@
     <footer>
         <div class="contact-info">
             <p>Contact: info@yourchamber.com | (555) 123-4567 | 123 Main St, Your City</p>
-            <!-- Update with actual contact info -->
         </div>
         <div class="dev-info">
             <p>&copy; <span id="current-year"></span> Nathan Hackleman | WDD 231 | Last Modified: <span
@@ -104,7 +96,7 @@
     </footer>
 
     <script src="scripts/home.js" defer></script>
-    <script src="scripts/main.js" defer></script> <!-- For general things like menu toggle, last modified -->
+    <script src="scripts/main.js" defer></script>
 </body>
 
 </html>

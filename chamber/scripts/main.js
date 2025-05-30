@@ -6,13 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
-            // Optional: Change button text/icon based on state
             if (mainNav.classList.contains('active')) {
                 menuToggle.setAttribute('aria-expanded', 'true');
-                // menuToggle.innerHTML = '&#10005;'; // Optional: Close icon
             } else {
                 menuToggle.setAttribute('aria-expanded', 'false');
-                // menuToggle.innerHTML = '&#9776;'; // Optional: Hamburger icon
             }
         });
     }
