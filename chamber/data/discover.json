@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Central Park",
+        "address": "123 Main St, YourCity, ST",
+        "description": "A beautiful green space in the heart of the city, perfect for relaxation and recreation.",
+        "image": "images/central-park.webp"
+    },
+    {
+        "name": "City Museum",
+        "address": "456 Museum Ave, YourCity, ST",
+        "description": "Explore local history and rotating exhibits in this modern museum.",
+        "image": "images/city-museum.webp"
+    },
+    {
+        "name": "Riverwalk Plaza",
+        "address": "789 River Rd, YourCity, ST",
+        "description": "A scenic riverside promenade with shops, cafes, and beautiful sunset views.",
+        "image": "images/riverwalk-plaza.webp"
+    },
+    {
+        "name": "Sunset Theater",
+        "address": "321 Cinema Ln, YourCity, ST",
+        "description": "A historic theater featuring classic films, live performances, and community events.",
+        "image": "images/sunset-theater.webp"
+    },
+    {
+        "name": "Botanical Gardens",
+        "address": "654 Garden St, YourCity, ST",
+        "description": "Explore diverse plant collections and themed gardens in this peaceful oasis.",
+        "image": "images/botanical-gardens.webp"
+    },
+    {
+        "name": "Skyline Observation Deck",
+        "address": "987 Tower Ave, YourCity, ST",
+        "description": "Enjoy panoramic views of the city from the tallest building downtown.",
+        "image": "images/skyline-observation.webp"
+    },
+    {
+        "name": "Artisan Market",
+        "address": "222 Market Sq, YourCity, ST",
+        "description": "A vibrant marketplace featuring local artists, handmade goods, and food stalls.",
+        "image": "images/artisan-market.webp"
+    },
+    {
+        "name": "Tech Innovation Hub",
+        "address": "555 Startup Blvd, YourCity, ST",
+        "description": "A collaborative space for entrepreneurs, tech events, and workshops.",
+        "image": "images/tech-innovation-hub.webp"
+    }
+]
