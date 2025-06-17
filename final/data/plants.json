@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Basil",
+        "image": "images/basil.jpg",
+        "light": "Full Sun",
+        "water": "Keep soil moist",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Mint",
+        "image": "images/mint.jpg",
+        "light": "Partial Shade",
+        "water": "Moderate",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Tomato",
+        "image": "images/tomato.jpg",
+        "light": "Full Sun",
+        "water": "Regular",
+        "difficulty": "Medium"
+    },
+    {
+        "name": "Lettuce",
+        "image": "images/lettuce.jpg",
+        "light": "Partial Shade",
+        "water": "Consistent moisture",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Chives",
+        "image": "images/chives.jpg",
+        "light": "Full Sun",
+        "water": "Light",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Parsley",
+        "image": "images/parsley.jpg",
+        "light": "Partial Sun",
+        "water": "Moderate",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Rosemary",
+        "image": "images/rosemary.jpg",
+        "light": "Full Sun",
+        "water": "Let soil dry between waterings",
+        "difficulty": "Medium"
+    },
+    {
+        "name": "Spinach",
+        "image": "images/spinach.jpg",
+        "light": "Partial Shade",
+        "water": "Moist, well-drained",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Strawberry",
+        "image": "images/strawberry.jpg",
+        "light": "Full Sun",
+        "water": "Regular",
+        "difficulty": "Medium"
+    },
+    {
+        "name": "Peppers",
+        "image": "images/peppers.jpg",
+        "light": "Full Sun",
+        "water": "Moderate",
+        "difficulty": "Medium"
+    },
+    {
+        "name": "Cilantro",
+        "image": "images/cilantro.jpg",
+        "light": "Full Sun",
+        "water": "Keep soil moist",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Green Onion",
+        "image": "images/greenonion.jpg",
+        "light": "Full Sun",
+        "water": "Moderate",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Radish",
+        "image": "images/radish.jpg",
+        "light": "Full Sun",
+        "water": "Consistent moisture",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Kale",
+        "image": "images/kale.jpg",
+        "light": "Full Sun",
+        "water": "Moist, well-drained",
+        "difficulty": "Easy"
+    },
+    {
+        "name": "Oregano",
+        "image": "images/oregano.jpg",
+        "light": "Full Sun",
+        "water": "Let soil dry between waterings",
+        "difficulty": "Medium"
+    }
+]

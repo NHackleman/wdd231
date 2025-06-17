@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Urban Gardening</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Beginner's Guide to Urban Gardening.">
+    <meta name="author" content="Nathan Hackleman">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta property="og:title" content="Contact | Urban Gardening">
+    <meta property="og:description" content="Contact Beginner's Guide to Urban Gardening.">
+    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yourdomain.com/final/contact.html">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Have a question or suggestion? Let us know!</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="plants.html">Plants</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <main id="main-content">
+        <section>
+            <h2>Contact Form</h2>
+            <form id="contact-form" action="form.html" method="GET" autocomplete="on">
+                <label for="name">Name:<span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:<span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:<span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; 2025 Beginner's Guide to Urban Gardening |
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://your-video-link.com" target="_blank" rel="noopener">Video Demo</a>
+        </p>
+    </footer>
+</body>
+
+</html>
